@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017, Gluon and/or its affiliates.
+    All rights reserved. Use is subject to license terms.
+
+    This file is available and licensed under the following license:
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+
+   - Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   - Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the distribution.
+   - Neither the name of Oracle Corporation and Gluon nor the names of its
+     contributors may be used to endorse or promote products derived
+     from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="320.0" stylesheets="@plansstyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.PlansController">
+   <children>
+      <AnchorPane layoutY="269.0" prefHeight="280.0" prefWidth="320.0">
+         <children>
+            <TabPane prefHeight="281.0" prefWidth="320.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Add Workout Plan">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="addPlanName" layoutX="96.0" layoutY="8.0" promptText="Enter plan name" />
+                              <Text layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plan Name" wrappingWidth="82.98307228088379" />
+                              <Text layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day 1" wrappingWidth="82.98307228088379" />
+                              <Text layoutX="14.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day 2" wrappingWidth="82.98307228088379" />
+                              <Text layoutX="14.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day 3" wrappingWidth="82.98307228088379" />
+                              <Text layoutX="14.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day 4" wrappingWidth="82.98307228088379" />
+                              <ChoiceBox fx:id="choiceBoxOne" layoutX="97.0" layoutY="43.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="choiceBoxTwo" layoutX="97.0" layoutY="77.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="choiceBoxThree" layoutX="97.0" layoutY="111.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="choiceBoxFour" layoutX="97.0" layoutY="144.0" prefWidth="150.0" />
+                              <Button fx:id="addPlanButton" layoutX="10.0" layoutY="182.0" mnemonicParsing="false" onAction="#setAddPlanButton" prefHeight="32.0" prefWidth="300.0" text="Add Plan" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Delete Workout Plan">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="60.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a row &#10;to Delete" textAlignment="CENTER" wrappingWidth="197.15233612060547">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="deletePlanButton" layoutX="10.0" layoutY="72.0" mnemonicParsing="false" onAction="#setDeletePlanButton" prefHeight="32.0" prefWidth="300.0" text="Delete Row" />
+                              <Label fx:id="deleteResults" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="121.0" prefHeight="110.0" prefWidth="300.0" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+      <Button id="backbutton" fx:id="backButton" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#setBackButton" prefHeight="55.0" prefWidth="90.0" text="Go Back" textFill="#e57309" />
+      <TableView fx:id="tabelView" layoutY="66.0" prefHeight="208.0" prefWidth="320.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" text="Name" />
+          <TableColumn fx:id="oneColumn" prefWidth="60.0" text="Day1" />
+            <TableColumn fx:id="twoColumn" prefWidth="60.0" text="Day 2" />
+            <TableColumn fx:id="threeColumn" prefWidth="60.0" text="Day 3" />
+            <TableColumn fx:id="fourColumn" prefWidth="60.0" text="Day 4" />
+        </columns>
+      </TableView>
+      <Label id="title" layoutX="102.0" layoutY="12.0" text="Workout Plans" />
+   </children>
+</AnchorPane>

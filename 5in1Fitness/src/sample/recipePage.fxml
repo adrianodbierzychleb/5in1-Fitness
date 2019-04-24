@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017, Gluon and/or its affiliates.
+    All rights reserved. Use is subject to license terms.
+
+    This file is available and licensed under the following license:
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+
+   - Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   - Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the distribution.
+   - Neither the name of Oracle Corporation and Gluon nor the names of its
+     contributors may be used to endorse or promote products derived
+     from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="320.0" stylesheets="@recipestyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RecipeController">
+   <children>
+      <Button fx:id="backButton" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#setBackButton" prefHeight="55.0" prefWidth="90.0" text="Go Back">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <AnchorPane id="titlebackground" layoutX="105.0" layoutY="1.0" prefHeight="65.0" prefWidth="201.0">
+         <children>
+            <Label id="title" layoutX="35.0" layoutY="8.0" text="Recipes" />
+         </children>
+      </AnchorPane>
+      <TabPane layoutY="66.0" prefHeight="484.0" prefWidth="320.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Lose Weight">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="160.0" fitWidth="294.0" layoutX="13.0" layoutY="36.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@chiicken%20salad.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="-4.0" layoutY="209.0" prefHeight="247.0" prefWidth="330.0" text="Shopping List:&#10;-100g chicken breast 132kcal&#10;-1/2 ice berg lettuce 37kcal&#10;-1/2 red onion 27kcal&#10;-1/2 red pepper 9kcal&#10;-1/3 cucumber 15kcal&#10;-Some sort of user preferred sauce but &#10;not recommended due to a huge calories &#10;increase. &#10;&#10;Preparation:&#10;(Average preperation time 15-20 minutes)&#10;1.Peal the vegetables that require so.&#10;2.Dice the chicken and vegetables.&#10;3.Cook the diced chicken on a pan, &#10;preferably using olive oil and desired &#10;spices.&#10;4.Place the diced vegetables in to a bowl.&#10;5.Once the chicken is cooked place it to &#10;the bowl with vegetables.&#10;6.Mix and ready to serve.&#10;" />
+                        <Text layoutX="93.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chicken Salad">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text=" Maintain Weight">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="167.0" prefWidth="312.0">
+                     <children>
+                        <ImageView fitHeight="160.0" fitWidth="294.0" layoutX="13.0" layoutY="36.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@ricechicken.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="-4.0" layoutY="209.0" prefHeight="246.0" prefWidth="329.0" text="Shopping List:&#10;-150g chicken breast 198kcal&#10;-100g basmati rice 351kcal&#10;-1/2  onion&#10;-1/2  red pepper&#10;-Some sort of user preferred spices for the&#10; chicken.&#10;-Salt for the rice and oil for chicken, both &#10;used during cooking&#10;&#10;Preparation:&#10;(Average preperation time 20-30 minutes)&#10;1.Peal the vegetables that require so.&#10;2.Dice the chicken and vegetables.&#10;3.Cook the rice in boiling water.&#10;4.At the same time fry the chicken with &#10;vegetables on a pan, adding the desired&#10;spices.&#10;5.Once the rice has cooked, mixed with &#10;the rest on the pan and reduce the hit &#10;for a short bit.&#10;6.Serve preferably in a bowl, ready to be&#10;served.&#10;" />
+                        <Text layoutX="76.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chicken with Rice">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text=" Gain Weight">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="160.0" fitWidth="294.0" layoutX="13.0" layoutY="36.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@ricechicken.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextArea layoutX="-4.0" layoutY="209.0" prefHeight="246.0" prefWidth="330.0" text="Shopping List:&#10;-200g chicken breast 264kcal&#10;-150g basmati rice 526kcal&#10;-1  onion&#10;-1  red pepper&#10;-Some sort of user preferred spices for the&#10; chicken.&#10;-Salt for the rice and oil for chicken, both &#10;used during cooking&#10;&#10;Preparation:&#10;(Average preperation time 20-30 minutes)&#10;1.Peal the vegetables that require so.&#10;2.Dice the chicken and vegetables.&#10;3.Cook the rice in boiling water.&#10;4.At the same time fry the chicken with &#10;vegetables on a pan, adding the desired&#10;spices.&#10;5.Once the rice has cooked, mixed with &#10;the rest on the pan and reduce the hit &#10;for a short bit.&#10;6.Serve preferably in a bowl, ready to be&#10;served.&#10;" />
+                        <Text layoutX="76.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chicken with Rice">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

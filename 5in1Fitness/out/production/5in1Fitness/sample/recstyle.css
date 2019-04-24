@@ -1,0 +1,64 @@
+
+*{
+
+  dark-primary-color: #D32F2F;
+  default-primary-color: #F44336;
+  light-primary-color: #FFCDD2;
+  text-primary-color: #FFFFFF;
+  accent-color: #607D8B;
+  primary-text-color: #212121;
+  secondary-text-color: #757575;
+  divider-color: #BDBDBD;
+
+}
+
+.root
+{
+  -fx-background-color: accent-color;
+}
+.choice-box
+{
+  -fx-background-color: default-primary-color;
+  -fx-effect: dropshadow(one-pass-box, black, 14, 0.0, 3, 3);
+  -fx-background-radius: 8;
+}
+
+.choice-box:hover{
+  -fx-background-color: dark-primary-color;
+}
+.choice-box:selected{
+  -fx-background-color: dark-primary-color;
+}
+
+
+#results
+{
+  -fx-font: 20px "Arial";
+  -fx-text-fill: primary-text-color;
+  -fx-background-cloro: default-primary-color;
+}
+
+#title
+{
+  -fx-font: 25px "Arial";
+  -fx-text-fill: default-primary-color;
+  -fx-label-padding: 4, 2,2,2,2;
+
+}
+
+.button{
+  -fx-text-fill: secondary-text-color;
+  -fx-effect: dropshadow(one-pass-box, black, 14, 0.0, 3, 3);
+  -fx-background-color: default-primary-color;
+  -fx-background-radius: 8;
+}
+
+#backbutton{
+    -fx-font: 17px "Arial";
+
+
+}
+
+.button:hover{
+  -fx-background-color: dark-primary-color;
+}

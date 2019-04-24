@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Copyright (c) 2017, Gluon and/or its affiliates.
+    All rights reserved. Use is subject to license terms.
+
+    This file is available and licensed under the following license:
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions
+    are met:
+
+   - Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   - Redistributions in binary form must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in
+     the documentation and/or other materials provided with the distribution.
+   - Neither the name of Oracle Corporation and Gluon nor the names of its
+     contributors may be used to endorse or promote products derived
+     from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="320.0" stylesheets="@workoutstyle.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WorkoutController">
+   <children>
+      <Label id="title" layoutX="141.0" layoutY="15.0" text="Workouts" />
+      <AnchorPane layoutY="269.0" prefHeight="280.0" prefWidth="320.0" />
+      <Button id="backbutton" fx:id="backButton" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#setBackButton" prefHeight="55.0" prefWidth="90.0" text="Go Back" />
+      <TextField fx:id="searchByExercise" layoutX="14.0" layoutY="84.0" prefHeight="27.0" prefWidth="292.0" promptText="Search by Exercise" />
+      <Button fx:id="searchButton" layoutX="14.0" layoutY="154.0" mnemonicParsing="false" onAction="#setSearchButton" prefHeight="27.0" prefWidth="292.0" text="Search" />
+      <Label fx:id="searchResults" layoutX="8.0" layoutY="201.0" prefHeight="288.0" prefWidth="292.0" text="Search for an exercise" textAlignment="JUSTIFY">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchByType" layoutX="14.0" layoutY="118.0" prefHeight="27.0" prefWidth="292.0" promptText="Search by Type" />
+   </children>
+</AnchorPane>
